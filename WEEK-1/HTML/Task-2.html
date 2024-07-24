@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website</title>
+
+    <!-- style part -->
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      header {
+        background-color: rgb(89, 189, 43);
+        text-align: center;
+        color: #fff;
+        padding: 16px;
+        font-size: 18px;
+      }
+
+      nav {
+        background-color: black;
+        padding: 20px;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        /* justify-content: space-between; */
+        display: inline-block;
+        margin: 0 20px;
+      }
+
+      .section_header {
+        text-align: center;
+      }
+
+      .sub_nav a {
+        text-decoration: none;
+        color: green;
+      }
+
+      .cat-1 {
+        font-size: 16px;
+        margin: 0 45px;
+        padding: 10px;
+      }
+
+      .section_header-1 {
+        padding: 20px;
+      }
+
+      .section_products {
+        /* background-color: blue; */
+        display: grid;
+        /* flex-wrap: wrap; */
+        grid-template-columns: 1fr 1fr 1fr;
+
+        justify-content: center;
+        gap: 25px;
+        /* padding: 20px; */
+
+        margin: 60px;
+      }
+
+      .section_products div {
+        padding: 60px;
+        background-color: #de9d9d;
+        /* justify-content: center; */
+        text-align: center;
+        border-radius: 2px;
+        border: 1px solid #6d6666;
+      }
+
+      .products a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+      }
+      .products a:hover {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Online Store</h1>
+    </header>
+    <nav>
+      <a class="link" href="#">Home</a>
+      <a class="link" href="#">Product</a>
+      <a class="link" href="#">Contact</a>
+    </nav>
+
+    <section class="section_header">
+      <h2 class="section_header-1">Product Categories</h2>
+      <div class="sub_nav">
+        <a class="cat-1" href="#">Electronics</a>
+        <a class="cat-1" href="#">Fashion and apparel </a>
+        <a class="cat-1" href="#">Furniture</a>
+        <a class="cat-1" href="#">Food</a>
+        <a class="cat-1" href="#">Toys</a>
+        <a class="cat-1" href="#">Household essentials</a>
+      </div>
+    </section>
+
+    <section class="section_products">
+      <div class="products">
+        <img
+          src="https://www.apple.com/v/iphone/home/bu/images/meta/iphone__ky2k6x5u6vue_og.png"
+          width="250px
+          "
+          height="150px"
+          alt="product_image"
+        />
+        <h3>Electronics</h3>
+        <p>This is a Great Product.</p>
+        <a
+          href="https://www.flipkart.com/apple-iphone-14-plus-blue-128-gb/p/itmac8385391b02b?pid=MOBGHWFHUYWGB5F2&lid=LSTMOBGHWFHUYWGB5F2XIJVA7&marketplace=FLIPKART&q=mobile+5g+iphone+15&store=tyy%2F4io&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_16_na_na_ps&otracker1=AS_QueryStore_OrganicAutoSuggest_1_16_na_na_ps&fm=search-autosuggest&iid=47db3d25-feff-4777-9c69-73ceb8108aba.MOBGHWFHUYWGB5F2.SEARCH&ppt=sp&ppn=sp&ssid=wiz6cehmn40000001719858034974&qH=3a9bf69869af6cda"
+          target="_blank"
+          >View Details</a
+        >
+      </div>
+      <div class="products">
+        <img
+          src="https://img0.junaroad.com/uiproducts/20404168/zoom_0-1697135833.jpg"
+          alt="product_image"
+          width="150px
+          "
+          height="150px"
+        />
+        <h3>Fashion and apparel</h3>
+        <p>This is a Great Product.</p>
+        <a
+          href="https://www.myntra.com/formal-shoes/highlander/highlander-men-brown-perforations-derbys/15725422/buy"
+          target="_blank"
+          >View Details</a
+        >
+      </div>
+      <div class="products">
+        <img
+          src="https://rukminim2.flixcart.com/image/450/450/l1zc6fk0/sofa-set/c/n/h/0-72-9-orange-black-velvet-3-2-2-207-97-25-0-34-0-152-98-original-imagdf4p5qrpfgbm.jpeg?q=90&crop=false"
+          alt="product_image"
+          width="250px
+          "
+          height="150px"
+        />
+        <h3>Furniture</h3>
+        <p>This is a Great Product.</p>
+        <a
+          href="https://www.flipkart.com/beaatho-verona-mid-back-sturdy-metal-base-nylon-revolving-chair-mesh-office-executive/p/itm9c92c49fdc931?pid=OSCG2XQQJCHDZEHY&lid=LSTOSCG2XQQJCHDZEHY0UDILI&marketplace=FLIPKART&store=wwe%2Fy7b%2Ffoc&srno=b_1_1&otracker=clp_omu_Bed%2BRoom%2BFurniture%2B_1_1.dealCard.OMU_furniture-store_furniture-store_FUYG6VY61UCA_1&otracker1=clp_omu_PINNED_neo%2Fmerchandising_Bed%2BRoom%2BFurniture%2B_NA_dealCard_cc_1_NA_view-all_1&fm=neo%2Fmerchandising&iid=en_QR0YBDzpDasWZbjr9TlCcJGdTKzLKimqCvUNemR17Ju03osrAG5qm7AYDqmFiy2_Azdb081sUyUYNZ0dVgi5AA%3D%3D&ppt=browse&ppn=browse&ssid=t9kle058lc0000001719858354392"
+          target="_blank"
+          >View Details</a
+        >
+      </div>
+      <div class="products">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTSkdR5H6GUNkTqTPKU2QPsye_pLhJUde3Zg&s"
+          alt="product_image"
+          width="250px
+          "
+          height="150px"
+        />
+        <h3>Food</h3>
+        <p>This is a Great Product.</p>
+        <a
+          href="https://www.google.com/search?sca_esv=119356d5c00122f0&sca_upv=1&rlz=1C1RXQR_enIN1000IN1000&sxsrf=ADLYWILaNmxDI4tD8y_RY659dAvpQNJUew:1719858555330&q=food&udm=2&fbs=AEQNm0BKxFXqFZETuC92mLOmXO9xJMdcEc6vsS8xotR_o6JIE2lxJVbfbQf0QBF0bvfl3GFNBPTQACMdFh6XPuV1Z0Eg9hjj1mCoiKv3FGCZSoL8LILIaFBmsBlsTk1VBHgiyzipkwW-xDop4s3VMgwqFjQ4wDqIL9DemUi5todZP3HhOoUF3xokdZ4HPzQsV34F9BtbMDoNsPkzc9jNgKofsmqZ9Y2lww&sa=X&ved=2ahUKEwjPnYSyvIaHAxWaTWwGHQhxBIoQtKgLegQIFRAB&biw=1280&bih=585&dpr=1.5#vhid=ybzA7rgSlMIkgM&vssid=mosaic"
+          target="_blank"
+          >View Details</a
+        >
+      </div>
+      <div class="products">
+        <img
+          src="https://m.media-amazon.com/images/I/81lroDEpXkL._SL1500_.jpg"
+          alt="product_image"
+          width="250px
+          "
+          height="150px"
+        />
+        <h3>Toys</h3>
+        <p>This is a Great Product.</p>
+        <a
+          href="https://www.amazon.in/Nicmore-Toddler-Toys-Boys-1-5-Multicolor/dp/B08JQ9K7HS"
+          target="_blank"
+          >View Details</a
+        >
+      </div>
+      <div class="products">
+        <img
+          src="https://m.media-amazon.com/images/I/51RXzjrUmkL._SL1000_.jpg"
+          alt="product_image"
+          width="250px
+          "
+          height="150px"
+        />
+        <h3>Household essentials</h3>
+        <p>This is a Great Product.</p>
+        <a
+          href="https://www.amazon.in/Pigeon-Stovekraft-Plastic-Chopper-Blades/dp/B01LWYDEQ7/ref=sr_1_6?adgrpid=55753499941&dib=eyJ2IjoiMSJ9.Qm5G_ohOMteOFSYzlzQrBF0n1ZZZ_RDbAdVAlWI-_T7fTLJMsAlqF0QgfBEW01FDZF0k6jtB4QuNwPJv3b1tmqe2qQVCwTlIjOJBnRe08WDGLGZFpRYjJd6xuQZi8SrdwwY5CxH8wM6GhdGeCRWjzc4jSFbUbRgNaZGTik-mP8lROd92dhHJXKX0EcFKwaDVwgigds9ZyRo6DP1TobBM7d-eSev_rpUwjh6vSj4jc6Vbh8eY-36LIQewVJEk10yfPO97CjVxtnfKWXBEsRey0w4xQ2fxU5ExuIzu9ECcmd0.3L6ijcAfvNqaqot1RtXU27YXLrly7-uv6nqBCXQ0kxw&dib_tag=se&ext_vrnc=hi&hvadid=381526529755&hvdev=c&hvlocphy=9197649&hvnetw=g&hvqmt=e&hvrand=4184640841696092617&hvtargid=kwd-295387203587&hydadcr=6477_1957715&keywords=household+essentials&qid=1719858661&sr=8-6"
+          target="_blank"
+          >View Details</a
+        >
+      </div>
+    </section>
+  </body>
+</html>

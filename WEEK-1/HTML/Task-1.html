@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website</title>
+
+    <!-- style part -->
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      header {
+        background-color: green;
+        text-align: center;
+        color: #fff;
+        padding: 16px;
+        font-size: 18px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #ececec;
+        margin: 0 40px;
+      }
+
+      .sub_heading {
+        display: flex;
+        justify-content: space-around;
+        /* margin-top: 20px; */
+        padding: 20px 0;
+        /* margin-bottom: 10px; */
+        font-weight: 700;
+        /* border-radius: 50%; */
+        /* background-color: #ebe7e6; */
+      }
+
+      .sub_heading img {
+        border-radius: 50%;
+      }
+
+      .container {
+        /* background-color: rgb(221, 248, 239); */
+        margin: auto;
+        padding: 20px 60px;
+      }
+
+      .paragraph {
+        /* background-color: lightgreen; */
+        line-height: 1.5;
+        font-size: 16px;
+      }
+
+      .skills {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      footer {
+        text-align: center;
+        /* background-color: #ebe7e6; */
+      }
+
+      /* colors */
+      .name {
+        /* background: linear-gradient(to left, red, blue) right;
+        color: #fff; */
+        font-size: 18px;
+      }
+
+      .skill_heading_1 {
+        background: linear-gradient(to left, red, blue) right;
+        padding: 12px 40px;
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      .skill_heading_2 {
+        background: linear-gradient(to left, red, blue) right;
+        padding: 12px 40px;
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+        /* list-style: none; */
+      }
+
+      .html {
+        color: #f76707;
+      }
+
+      .css {
+        color: #1c7ed6;
+      }
+
+      .js {
+        color: #f59f00;
+      }
+
+      .fm {
+        color: rgb(11, 123, 85);
+      }
+
+      ul .react {
+        color: #1864ab;
+      }
+
+      ul .nextjs {
+        color: #333;
+      }
+
+      .nodejs {
+        color: #09dc30;
+      }
+
+      .ex {
+        color: #55a363;
+        /* color: #fff; */
+      }
+
+      .db {
+        color: #1b4f25;
+      }
+
+      .sql {
+        color: rgb(91, 121, 32);
+      }
+
+      .location {
+        color: #5c940d;
+      }
+
+      .hyd {
+        color: green;
+      }
+      .mail {
+        color: #d9480f;
+      }
+
+      .pn {
+        color: #0b7285;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Durga Prasad Naik Kethavath</h1>
+      <nav>
+        <a class="link" href="#">About Me</a>
+        <a class="link" href="#">My Skills</a>
+        <a class="link" href="#">Contact</a>
+      </nav>
+    </header>
+    <article class="sub_heading">
+      <h1 style="color: #d65c2b">Full Stack Web Developer</h1>
+      <img src="../img/Durga.jpg" alt="photo" width="100px" height="100px" />
+    </article>
+
+    <section class="container">
+      <h2 style="color: #77520e">About Me</h2>
+      <p class="paragraph">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello!
+        I'm <strong class="name">Durga Prasad Naik Kethavath</strong>, a web
+        developer and full stack web development with a passion for creating
+        amazing websites and applications. My greatest skill as a front end
+        developer is my in-depth knowledge of different coding languages. I'm an
+        expert in JavaScript, CSS, and HTML after years of schooling. Knowing
+        all three coding languages helps me adapt to different work environments
+        and meet different clients' needs.
+      </p>
+
+      <div>
+        <h2 style="color: #77520e">My Skills</h2>
+        <div class="skills">
+          <div>
+            <h3 class="skill_heading_1">Front-end Development</h3>
+            <ul>
+              <li class="html">HTML</li>
+              <li class="css">CSS</li>
+              <li class="js">JavaScript</li>
+              <li class="fm">
+                Frameworks
+                <ul>
+                  <li class="react">React JS</li>
+                  <li class="nextjs">Next.js</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="skill_heading_2">Back-end Development</h3>
+            <ul>
+              <li class="nodejs">Node.js</li>
+              <li class="ex">Express.js</li>
+              <li class="db">MongoDB</li>
+              <li class="sql">SQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 style="color: #77520e">Contact Me</h2>
+        <p>
+          <strong class="mail">Email :</strong>
+          kethavathdurgaprasadnaik@gmail.com
+        </p>
+        <p><strong class="pn">Phone Number :</strong> +91 8688017971</p>
+        <p>
+          <strong class="location">Location</strong> : 53-B, Happy Home Boys
+          Hostel, Vengal Rao Nagar, SR Nagar,
+          <strong class="hyd"> Hyderabad, Telangana - 500038</strong>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p style="color: gray">
+        &copy; I do hereby declare that all the above information given is true
+        and correct to the best of my knowledge and belief.
+      </p>
+    </footer>
+  </body>
+</html>

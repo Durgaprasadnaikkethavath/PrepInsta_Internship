@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Listing Page</title>
+    <link rel="stylesheet" href="Task-3.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Product Listing</h1>
+    </header>
+    <div class="container">
+      <aside class="filters">
+        <h2>Filters</h2>
+        <form id="filterForm">
+          <div class="filter-category">
+            <h3>Category</h3>
+            <label>
+              <input type="checkbox" name="category" value="electronics" />
+              Electronics
+            </label>
+            <label>
+              <input type="checkbox" name="category" value="clothing" />
+              Clothing
+            </label>
+            <label>
+              <input type="checkbox" name="category" value="home" /> Home
+            </label>
+          </div>
+          <div class="filter-price">
+            <h3>Price Range</h3>
+            <label>
+              <input type="radio" name="price" value="0-50" /> $0 - $50
+            </label>
+            <label>
+              <input type="radio" name="price" value="51-100" /> $51 - $100
+            </label>
+            <label>
+              <input type="radio" name="price" value="101-200" /> $101 - $200
+            </label>
+          </div>
+          <button type="submit">Apply Filters</button>
+        </form>
+      </aside>
+      <main class="products">
+        <div class="product-card">
+          <img
+            src="https://m.media-amazon.com/images/I/71khlADY21L._AC_UL480_FMwebp_QL65_.jpg"
+            alt="Product Image"
+          />
+          <h3>Product Name 1</h3>
+          <p>$49.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://m.media-amazon.com/images/I/71yrLOqja-L._SY879_.jpg"
+            width="50%"
+            height="50%"
+            alt="Product Image"
+          />
+          <h3>Product Name 2</h3>
+          <p>$89.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://m.media-amazon.com/images/I/81qOUutP5WL._SX679_.jpg"
+            width="50%"
+            height="50%"
+            alt="Product Image"
+          />
+          <h3>Product Name 3</h3>
+          <p>$129.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <!-- Add more product cards as needed -->
+      </main>
+    </div>
+  </body>
+</html>
