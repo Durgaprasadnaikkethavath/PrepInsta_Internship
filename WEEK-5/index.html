@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="./style.css" rel="stylesheet" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <title>Week-5 task</title>
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
+    <header id="header">
+      <div class="header_name">
+        <a href="#">Durga's Online Shopping</a>
+      </div>
+      <nav>
+        <a href="#items">Fruits</a>
+        <a href="#items">Mobiles</a>
+        <a href="#items">Laptops</a>
+        <a href="#items">Watch</a>
+        <a href="#items">perfume</a>
+      </nav>
+      <div class="wishCart">
+        <div id="wishlist" onclick="showWishListItem()">
+          <ion-icon class="wishlist_icon" name="heart-outline"></ion-icon>
+          <p>WISHLIST</p>
+        </div>
+        <div class="header_cart" onclick="showBagItems()">
+          <ion-icon name="cart-outline"></ion-icon>
+          <p class="cart_number">(<span id="bag-count">0</span>)</p>
+        </div>
+      </div>
+    </header>
+    <!-- addtobag and wishlist -->
+    <section>
+      <div class="bag" id="bag-items">
+        <div class="h2">
+          <h2>Your all addToBag Items</h2>
+          <h2>Total Price: $<span id="totalPrice">0.00</span></h2>
+        </div>
+        <ul id="bagItems"></ul>
+        <!-- <div class="total">
+        </div> -->
+      </div>
+      <div class="wishlist" id="wishlistItem">
+        <h2 class="wishlist_heading">Your all WishList Items</h2>
+        <ul id="wishlistItems"></ul>
+      </div>
+    </section>
+
+    <!-- products -->
+    <div id="items">
+      <div class="item" id="item">
+        <img src="./img/fruit_1.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Orange</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$10.00</h1>
+            <p class="mrp">M.R.P: $<span>14</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/fruit_1.jpg"
+            onclick="addToBag('')"
+          >
+            <ion-icon class="both_icons" name="bag-handle-outline"></ion-icon>
+            AddToBag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/fruit_1.jpg"
+            onclick="addWishList('')"
+          >
+            <ion-icon class="both_icons" name="heart-outline"></ion-icon>
+            AddToWishList
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/fruit_2.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">strawberry</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$15.00</h1>
+            <p class="mrp">M.R.P: $<span>17</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/fruit_2.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/fruit_2.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/fur_2.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">perfume</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$13.5</h1>
+            <p class="mrp">M.R.P: $<span>17</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/fur_2.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/fur_2.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/fur_3.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">perfume</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$12.00</h1>
+            <p class="mrp">M.R.P: $<span>15</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/fur_3.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/fur_3.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/lop_1.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Laptop</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$1000K</h1>
+            <p class="mrp">M.R.P: $<span>14000K</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_1.jpg"
+            onclick="addToBag('')"
+          >
+            <ion-icon class="both_icons" name="bag-handle-outline"></ion-icon>
+            AddToBag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_1.jpg"
+            onclick="addWishList('')"
+          >
+            <ion-icon class="both_icons" name="heart-outline"></ion-icon>
+            AddToWishList
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/lop_2.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Laptop</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$999k</h1>
+            <p class="mrp">M.R.P: $<span>1600k</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_2.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/lop_2.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/fur_4.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">perfume</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$13.5</h1>
+            <p class="mrp">M.R.P: $<span>17</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/fur_4.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/fur_4.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/lop_3.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Laptop</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$1200k</h1>
+            <p class="mrp">M.R.P: $<span>1600k</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_3.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/lop_3.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/ph_1.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Iphone</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$10000K</h1>
+            <p class="mrp">M.R.P: $<span>14000K</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/ph_1.jpg"
+            onclick="addToBag('')"
+          >
+            <ion-icon class="both_icons" name="bag-handle-outline"></ion-icon>
+            AddToBag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/ph_1.jpg"
+            onclick="addWishList('')"
+          >
+            <ion-icon class="both_icons" name="heart-outline"></ion-icon>
+            AddToWishList
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/ph_2.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">phone</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$600k</h1>
+            <p class="mrp">M.R.P: $<span>1000K</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/ph_1.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/ph_1.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/sh_1.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">shoes</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$13.5</h1>
+            <p class="mrp">M.R.P: $<span>17</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/sh_1.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/sh_1.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/lop_3.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Laptop</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$1200k</h1>
+            <p class="mrp">M.R.P: $<span>1500k</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_3.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/lop_3.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/lop_1.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Laptop</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$1000K</h1>
+            <p class="mrp">M.R.P: $<span>14000K</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_1.jpg"
+            onclick="addToBag('')"
+          >
+            <ion-icon class="both_icons" name="bag-handle-outline"></ion-icon>
+            AddToBag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_1.jpg"
+            onclick="addWishList('')"
+          >
+            <ion-icon class="both_icons" name="heart-outline"></ion-icon>
+            AddToWishList
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/sm_1.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Smart Watch</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$99k</h1>
+            <p class="mrp">M.R.P: $<span>160k</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/sm_1.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/sm_1.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/sm_3.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Watch</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$135</h1>
+            <p class="mrp">M.R.P: $<span>177</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/sm_3.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/sm_3.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/lop_3.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Laptop</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$1200k</h1>
+            <p class="mrp">M.R.P: $<span>1600k</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_3.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/lop_3.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/fruit_1.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Orange</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$10.00</h1>
+            <p class="mrp">M.R.P: $<span>14</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/fruit_1.jpg"
+            onclick="addToBag('')"
+          >
+            <ion-icon class="both_icons" name="bag-handle-outline"></ion-icon>
+            AddToBag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/fruit_1.jpg"
+            onclick="addWishList('')"
+          >
+            <ion-icon class="both_icons" name="heart-outline"></ion-icon>
+            AddToWishList
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/fruit_2.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">strawberry</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$15.00</h1>
+            <p class="mrp">M.R.P: $<span>17</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/fruit_2.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/fruit_2.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/fur_2.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">perfume</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$13.5</h1>
+            <p class="mrp">M.R.P: $<span>17</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/fur_2.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/fur_2.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/fur_3.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">perfume</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$12.00</h1>
+            <p class="mrp">M.R.P: $<span>15</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/fur_3.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/fur_3.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/lop_1.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Laptop</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$1000K</h1>
+            <p class="mrp">M.R.P: $<span>14000K</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_1.jpg"
+            onclick="addToBag('')"
+          >
+            <ion-icon class="both_icons" name="bag-handle-outline"></ion-icon>
+            AddToBag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_1.jpg"
+            onclick="addWishList('')"
+          >
+            <ion-icon class="both_icons" name="heart-outline"></ion-icon>
+            AddToWishList
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/lop_2.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Laptop</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$999k</h1>
+            <p class="mrp">M.R.P: $<span>1600k</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_2.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/lop_2.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/fur_4.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">perfume</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$13.5</h1>
+            <p class="mrp">M.R.P: $<span>17</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/fur_4.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/fur_4.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/lop_3.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Laptop</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$1200k</h1>
+            <p class="mrp">M.R.P: $<span>1600k</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_3.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/lop_3.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/ph_1.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Iphone</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$10000K</h1>
+            <p class="mrp">M.R.P: $<span>14000K</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/ph_1.jpg"
+            onclick="addToBag('')"
+          >
+            <ion-icon class="both_icons" name="bag-handle-outline"></ion-icon>
+            AddToBag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/ph_1.jpg"
+            onclick="addWishList('')"
+          >
+            <ion-icon class="both_icons" name="heart-outline"></ion-icon>
+            AddToWishList
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/ph_2.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">phone</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$600k</h1>
+            <p class="mrp">M.R.P: $<span>1000K</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/ph_1.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/ph_1.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/sh_1.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">shoes</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$13.5</h1>
+            <p class="mrp">M.R.P: $<span>17</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/sh_1.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/sh_1.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/lop_3.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Laptop</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$1200k</h1>
+            <p class="mrp">M.R.P: $<span>1500k</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_3.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/lop_3.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/lop_1.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Laptop</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$1000K</h1>
+            <p class="mrp">M.R.P: $<span>14000K</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_1.jpg"
+            onclick="addToBag('')"
+          >
+            <ion-icon class="both_icons" name="bag-handle-outline"></ion-icon>
+            AddToBag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_1.jpg"
+            onclick="addWishList('')"
+          >
+            <ion-icon class="both_icons" name="heart-outline"></ion-icon>
+            AddToWishList
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/sm_1.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Smart Watch</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$99k</h1>
+            <p class="mrp">M.R.P: $<span>160k</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/sm_1.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/sm_1.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/sm_3.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Watch</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$135</h1>
+            <p class="mrp">M.R.P: $<span>177</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/sm_3.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/sm_3.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+      <div class="item" id="item">
+        <img src="./img/lop_3.jpg" alt="Item 1" />
+        <div class="product_price_name">
+          <p class="product_name">Laptop</p>
+          <div class="item_rating">
+            <div>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon class="rating_icons" name="star-outline"></ion-icon>
+              <ion-icon
+                class="rating_icons"
+                name="star-half-outline"
+              ></ion-icon>
+            </div>
+            <p>(547)</p>
+          </div>
+          <div class="price_mrp_prc">
+            <h1>$1200k</h1>
+            <p class="mrp">M.R.P: $<span>1600k</span></p>
+            <p class="item_per">(45% off)</p>
+          </div>
+        </div>
+        <p class="delivery_date">
+          - git it by,<strong>Tomorrow, 11.30AM to 9.00PM</strong>
+        </p>
+        <p class="item_paragraph">
+          "Forms blood vessels, muscles, cartilage, and collagen in your bones."
+        </p>
+        <div class="buttons">
+          <button
+            class="addToBag"
+            data-name="Orange"
+            data-price="10"
+            data-img="./img/lop_3.jpg"
+            onclick="addToBag('')"
+          >
+            Add to Bag
+          </button>
+          <button
+            class="addToWishlist"
+            data-name="orange"
+            data-price="10"
+            data-img="./img/lop_3.jpg"
+          >
+            Add to Wishlist
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
